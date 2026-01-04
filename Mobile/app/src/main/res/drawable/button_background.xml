@@ -1,0 +1,17 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- State when the button is pressed -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorPressed" /> <!-- Màu khi nhấn vào button -->
+            <corners android:radius="50dp" /> <!-- Bo góc lớn để có dạng hình bầu dục -->
+        </shape>
+    </item>
+
+    <!-- Default state (normal) -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/colorPrimaryLight" /> <!-- Màu nền cho button -->
+            <corners android:radius="50dp" /> <!-- Bo góc lớn -->
+        </shape>
+    </item>
+</selector>

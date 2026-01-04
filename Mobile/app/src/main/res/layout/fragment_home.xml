@@ -1,0 +1,127 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Avatar và Lời chào -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/avatar"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:fontFamily="@font/lato_regular"
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi Huy, let’s explore some Vietnamese foods!"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_vertical" />
+    </LinearLayout>
+
+    <!-- Thanh tìm kiếm -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Find recipes"
+        android:background="@drawable/search_background"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="8dp"
+        android:textColor="@android:color/black"
+        android:textColorHint="#A9A9A9"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:fontFamily="@font/lato_regular"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="Suggested Foods"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Danh sách món ăn -->
+    <TextView
+        android:fontFamily="@font/lato_regular"
+        android:id="@+id/tv_breakfast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEAFOOD"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView for Breakfast (cuộn ngang) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_breakfast"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:clipToPadding="false"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp" />
+
+    <TextView
+        android:fontFamily="@font/lato_regular"
+        android:id="@+id/tv_lunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VEGETARIAN"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView for Lunch (cuộn ngang) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_lunch"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:clipToPadding="false"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp" />
+
+    <TextView
+        android:id="@+id/tv_dinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato_regular"
+        android:text="DESSERT"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView for Dinner (cuộn ngang) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_dinner"
+        android:layout_width="match_parent"
+        android:layout_height="133dp"
+        android:clipToPadding="false"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp" />
+
+</LinearLayout>

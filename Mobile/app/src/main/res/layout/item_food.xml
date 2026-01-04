@@ -1,0 +1,36 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardBackgroundColor="@android:color/white">
+
+<LinearLayout
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+android:padding="8dp">
+
+<!-- Hình ảnh của món ăn -->
+<ImageView
+    android:id="@+id/imgFood"
+    android:layout_width="130dp"
+    android:layout_height="80dp"
+    android:scaleType="centerCrop" />
+
+<!-- Tên món ăn -->
+    <TextView
+        android:fontFamily="@font/lato_regular"
+        android:id="@+id/tvFoodName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+    android:ellipsize="end"
+    android:text="Text"
+    android:textSize="16sp"
+    android:textColor="@color/black" />
+
+</LinearLayout>
+    </androidx.cardview.widget.CardView>

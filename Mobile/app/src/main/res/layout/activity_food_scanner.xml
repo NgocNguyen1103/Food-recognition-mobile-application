@@ -1,0 +1,170 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <!-- Header với nút Back và tiêu đề -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- Nút Back -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_alignParentStart="true"
+            android:contentDescription="@string/back_button_description"/>
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:id="@+id/scannerTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Food scanner"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+    </LinearLayout>
+
+    <!-- ImageView cho hình ảnh thực phẩm -->
+    <ImageView
+        android:id="@+id/foodImageView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@drawable/sample_food_image"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners" />
+
+    <!-- Mô tả thực phẩm -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_corners_light">
+
+        <TextView
+            android:id="@+id/foodNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cheese"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/foodDescriptionTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cheese is a dairy product made by curdling milk and then draining off the whey, resulting in a product with a rich and distinctive flavor."
+            android:textColor="@color/black"
+            android:textSize="14sp"/>
+
+        <!-- Thông tin calo -->
+        <TextView
+            android:id="@+id/foodCaloriesTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="100g ~ 393 calories"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- Đánh giá kết quả -->
+    <TextView
+        android:id="@+id/accuracyPromptTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How is the accuracy of the result?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Thanh RatingBar để đánh giá độ chính xác -->
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:numStars="5"
+        android:stepSize="1.0"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp"
+        android:rating="0" />
+
+    <!-- Phần chứa nút Add to Cart -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <!-- Nút Add to Cart -->
+        <ImageButton
+            android:id="@+id/addToCartButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/add_to_cart"
+            android:background="?android:attr/selectableItemBackground"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:contentDescription="@strings/add_to_cart_description" />
+    </RelativeLayout>
+
+
+
+
+    <!-- Phần đánh giá với ô nhập liệu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/reviewTitleEditText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="(Title)"
+            android:padding="12dp"
+            android:layout_gravity="center"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/reviewScriptEditText"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:hint="(Script)"
+            android:padding="12dp"
+            android:inputType="textMultiLine"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <!-- Nút submit đánh giá -->
+    <Button
+        android:id="@+id/submitReviewButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Submit Review"
+        android:background="@drawable/edit_text_background2"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:contentDescription="@strings/submit_review_description"/>
+
+</LinearLayout>

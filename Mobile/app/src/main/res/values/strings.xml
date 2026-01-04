@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Group_project_2024</string>
+    <!-- Chuỗi cho nút quay lại -->
+    <string name="back_button_description">Go back</string>
+
+    <!-- Chuỗi cho nút chỉnh sửa ảnh đại diện -->
+    <string name="edit_avatar_description">Edit profile picture</string>
+
+    <!-- tiêu đề "Edit Profile" -->
+    <string name="edit_profile">Edit Profile</string>
+
+    <string name="add_to_cart_description">Add to cart</string>
+
+    <string name="submit_review_description">Submit review</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="take_photo">Take a photo</string>
+
+</resources>

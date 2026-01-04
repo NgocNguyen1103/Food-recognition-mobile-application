@@ -1,0 +1,17 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Đặt màu nền -->
+    <solid android:color="#B3D1D5"/> <!-- Màu xanh nhạt giống trong hình -->
+
+    <!-- Bo tròn các góc -->
+    <corners android:radius="16dp"/> <!-- Điều chỉnh radius theo ý thích của bạn -->
+
+    <!-- Thêm padding nếu cần -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+
+</shape>

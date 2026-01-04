@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Phần trên với tiêu đề và nút back (đặt ở đầu màn hình) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryLight"
+        android:padding="16dp">
+
+        <!-- Nút Back -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/back_button_description"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Tiêu đề căn giữa -->
+        <TextView
+            android:fontFamily="@font/lato_regular"
+            android:id="@+id/pickMealTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Recipe"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Nội dung công thức -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/meal_instruction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Instructions will be here"
+                android:textSize="18sp"
+                android:padding="8dp" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

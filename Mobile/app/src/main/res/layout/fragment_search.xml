@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Logo at the top center -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="206dp"
+        android:layout_height="57dp"
+        android:src="@drawable/logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Avatar and Greeting -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="start">
+
+        <ImageView
+            android:id="@+id/user_avatar"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/avatar"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi Huy, let’s find the Vietnamese foods"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"/>
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Find recipes"
+        android:padding="10dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/search_background"
+        android:drawableLeft="@drawable/search_background"/>
+
+    <!-- Categories Section (Meat, Egg, etc.) -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Meat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meat"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/Egg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Egg"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/Milk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Milk"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/Seafood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seafood"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginRight="20dp"/>
+
+            <TextView
+                android:id="@+id/Rice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rice"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/Banana"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Banana"
+                android:layout_marginLeft="20dp"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- RecyclerView for the Food Items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_breakfast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal"/>
+
+</LinearLayout>

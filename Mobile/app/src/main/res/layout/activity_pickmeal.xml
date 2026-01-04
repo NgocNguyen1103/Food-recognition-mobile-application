@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <!-- Phần trên với tiêu đề và nút back (đặt ở đầu màn hình) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryLight"
+        android:padding="16dp">
+
+        <!-- Nút Back -->
+        <ImageButton
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="?android:attr/selectableItemBackground"
+            android:contentDescription="@string/back_button_description"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Tiêu đề căn giữa -->
+        <TextView
+            android:id="@+id/pickMealTitle"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:text="Pick your meal"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_weight="1"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Phần chính chứa biểu tượng và thông báo lỗi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingTop="100dp">
+
+        <!-- Biểu tượng mặt buồn -->
+        <ImageView
+            android:id="@+id/sadIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_sad_face"
+            android:layout_gravity="center"/>
+
+        <!-- Dòng thông báo -->
+        <TextView
+            android:id="@+id/notFoundText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOT FOUND the result!"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>
